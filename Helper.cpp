@@ -164,3 +164,16 @@ string Helper::getInput(){
     cin >> str;
     return str;
 }
+
+
+/**
+ * This method clears cin so that there is no value stored in the object
+ */
+void Helper::clearCin(){
+
+    cin.clear();
+    string lineIgnore;
+    getline(cin, lineIgnore);
+
+
+}

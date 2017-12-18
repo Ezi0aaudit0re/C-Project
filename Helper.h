@@ -21,6 +21,8 @@ class Helper{
         static std::string* getStringArray(int);
         // covert a vector to a array
         static std::string* vecToArray(int, std::vector<std::string>);
+        // clears the value stored in cin 
+        static void clearCin();
 
 };
 

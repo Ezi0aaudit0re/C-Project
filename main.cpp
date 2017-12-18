@@ -86,6 +86,7 @@ int main(int argc, char* argv[]){
            cout << "The final array is: " << endl;
            Helper::printArray( arr.getSize(), arr.getArrayP());
        }
+       // remove an array from the array of words
        else if(userIn.compare("1") == 0){
            int size = 0;
             cout << "Please Enter the number of words you want to add to the array: ";
@@ -93,13 +94,15 @@ int main(int argc, char* argv[]){
 
           if(cin.fail()){
                cout << "You entered an incorrect string" << endl; 
+               // clear the value from cin else incorrect value entered is stored in cin and gets passed to get imput method
+               Helper::clearCin();
           }
           else{
               // get the capacity of the array
               int capacity = arr.getSize();
               string* addArr = nullptr;
               arr.addArray(addArr, size, capacity);
-              cout << "Words removed from the array" << endl;
+              cout << "Words stored from the array" << endl;
           }
 
 
@@ -111,15 +114,15 @@ int main(int argc, char* argv[]){
            cin >> size;
            if(cin.fail()){
                  cout << "You entered an incorrect string" << endl; 
+               // clear the value from cin else incorrect value entered is stored in cin and gets passed to get imput method
+                 Helper::clearCin();
             }
            else{
-           // get the capacity of the array
-           int capacity = arr.getSize();
-           string* removeArr = nullptr;
-           arr.removeArray(removeArr, size, capacity);
-           cout << "Words removed from the array" << endl;
-           
-           
+               // get the capacity of the array
+               int capacity = arr.getSize();
+               string* removeArr = nullptr;
+               arr.removeArray(removeArr, size, capacity);
+               cout << "Words removed from the array" << endl;
            
            }
 
@@ -128,8 +131,6 @@ int main(int argc, char* argv[]){
        else{
             cout << "Please choose a correct option" << endl;
        }
-       cin.clear();
-       cin.sync();
    }
 
 }

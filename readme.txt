@@ -1,4 +1,4 @@
-This folder contains files for Project 2 
+This folder contains files for Project 3 
 
 The starting point of the program is main.cpp 
 
